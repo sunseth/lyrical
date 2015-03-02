@@ -1,4 +1,5 @@
 var currentAnswer;
+var currentScore;
 function getNext(){
 	$.ajax({
 		type: 'GET',
@@ -18,13 +19,18 @@ function getNext(){
 	});
 }
 
-function moveScore(){
+$('.options').hover(function(){
 
+});
+
+function moveScore(score){
+	currentScore++;
 }
 
-function gameOver(){
-	
-}
+function gameOver(last){	
+	var pow = int(currentScore);
+	last.text('Thanks for playing! You earned ' + eval(2^pow) + ' bitcoins!');	
+}	
 
 function collapse(answer){
 	$('.options').addClass('collapsed');
@@ -38,21 +44,27 @@ function rollout(answer){
 
 $(document).ready(function(){
 	currentAnswer = getNext();
+	currentScore = 0;
+
 	$('.options').click(function(){
 		if ($(this).attr('id') == currentAnswer){
 			collapse($(this));
-			$(this).addClass('green');
-			setTimeout(function(){
+			$(this).addClass('green').delay(2100).queue(function(next){
 				$(this).removeClass('green');
-				rollout($(this));
+				next();
+			});
+			var thisSaved = $(this);
+			setTimeout(function(){
+				rollout(thisSaved);
 				currentAnswer = getNext();
 				moveScore();
 			}, 2000);
 		} else {
 			collapse($(this));
 			$(this).addClass('red');
+			var thisSaved = $(this);
 			setTimeout(function(){
-				gameOver();
+				gameOver(thisSaved);
 			}, 2000);
 		}
 	});

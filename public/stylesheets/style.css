@@ -12,7 +12,7 @@ main {
     width: 1080px;
     height: 600px;
     position: absolute;
-    top: calc(50% - 150px);
+    top: calc(50% - 230px);
     left: calc(50% - 540px);
 }
 
@@ -101,12 +101,15 @@ main {
 }
 
 .score {
-	text-align: right;
-    height: 45px;
-    padding: 5px;
-}
-
-p .score {
-    text-align: center;
-    font-size: 24px;
+	border: 2px solid black;
+	text-align: center;
+    height: 48px;
+    width: 200px;
+    margin: 2px auto;
+    background: rgba(75,155,175,0.6);
+    font-size: 20px;
+    background-image: url('../images/bitcoin.png');
+    background-repeat: no-repeat;
+    background-position: 66% 75%;
+    background-size: 20px 20px;
 }
