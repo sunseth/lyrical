@@ -73,10 +73,6 @@ main {
 	cursor: hand;
 }
 
-.options:hover{
-	background: gold;
-}
-
 .collapsed{
 	opacity: 0;
 }

@@ -40,16 +40,24 @@ $(document).ready(function(){
 	currentAnswer = getNext();
 	$('.options').click(function(){
 		if ($(this).attr('id') == currentAnswer){
-			
 			collapse($(this));
 			setTimeout(function(){
-				rollout($(this));
-				currentAnswer = getNext();
-				moveScore();
+				$(this).addClass('green');
+				setTimeout(function(){
+					$(this).removeClass('green');
+					rollout($(this));
+					currentAnswer = getNext();
+					moveScore();
+				}, 2000);
 			}, 2000);
 		} else {
-			$(this).addClass('red');
+			collapse($(this));
+			
 			setTimeout(function(){
+				$(this).addClass('red');
+				setTimeout(function(){
+
+				});
 				gameOver();
 			}, 2000);
 		}
