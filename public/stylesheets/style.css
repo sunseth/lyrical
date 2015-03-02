@@ -1,0 +1,116 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Raleway', sans-serif;
+	height: 100%;
+	width: 100%;
+	background-image: url('../images/lyricalbg.jpg');
+	background-size: cover;
+}
+
+main {
+    width: 1080px;
+    height: 600px;
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 540px);
+}
+
+#stage {
+	float: left;
+    display: inline-block;
+    width: 800px;
+    height: 100%;
+    vertical-align: top;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+#upper {
+   
+}
+
+#upper h1{
+	text-align: center;
+	font-size: 36px;
+}
+
+#song {
+    padding: 10px 0px 25px 0px;
+    text-align: center;
+    font-size: 24px;
+}
+
+#level {
+    display: inline-block;
+    width: 250px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+#messages {
+    width: 90%;
+    height: 50%;
+    margin: 0 auto;
+    background: white;
+}
+
+.options-container{
+	
+}
+
+.options {
+    border: 2px solid black;
+    width: 80%;
+    height: 50px;
+    margin: 10px auto;
+    padding: 10px;
+    -webkit-transition: all 0.4s ease-out;
+	-moz-transition: all 0.4s ease-out;
+	-ms-transition: all 0.4s ease-out;
+	-o-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.options:hover{
+	background: gold;
+}
+
+.collapsed{
+	opacity: 0;
+}
+
+.highestAnswer{
+	opacity: 1;
+}
+
+.green{
+	background: green;
+}
+
+.red{
+	background: red;
+}
+
+.answer {
+    font-size: 40px;
+    display: inline-block;
+
+}
+
+.line {
+	display: inline-block;
+	font-size: 20px;
+}
+
+.score {
+	text-align: right;
+    height: 45px;
+    padding: 5px;
+}
+
+p .score {
+    text-align: center;
+    font-size: 24px;
+}
