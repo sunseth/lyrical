@@ -41,23 +41,17 @@ $(document).ready(function(){
 	$('.options').click(function(){
 		if ($(this).attr('id') == currentAnswer){
 			collapse($(this));
+			$(this).addClass('green');
 			setTimeout(function(){
-				$(this).addClass('green');
-				setTimeout(function(){
-					$(this).removeClass('green');
-					rollout($(this));
-					currentAnswer = getNext();
-					moveScore();
-				}, 2000);
+				$(this).removeClass('green');
+				rollout($(this));
+				currentAnswer = getNext();
+				moveScore();
 			}, 2000);
 		} else {
 			collapse($(this));
-			
+			$(this).addClass('red');
 			setTimeout(function(){
-				$(this).addClass('red');
-				setTimeout(function(){
-
-				});
 				gameOver();
 			}, 2000);
 		}
