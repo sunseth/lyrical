@@ -98,18 +98,29 @@ main {
 .line {
 	display: inline-block;
 	font-size: 20px;
+	width: 570px;
+	text-align: center;
 }
 
 .score {
 	border: 2px solid black;
 	text-align: center;
     height: 48px;
-    width: 200px;
+    width: 240px;
     margin: 2px auto;
-    background: rgba(75,155,175,0.6);
+    background: gold;
     font-size: 20px;
     background-image: url('../images/bitcoin.png');
     background-repeat: no-repeat;
     background-position: 66% 75%;
     background-size: 20px 20px;
+    -webkit-transition: all 0.4s ease-out;
+	-moz-transition: all 0.4s ease-out;
+	-ms-transition: all 0.4s ease-out;
+	-o-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
+}
+
+.selected-score{
+	transform:translateX(-25px);
 }

@@ -23,7 +23,9 @@ $('.options').hover(function(){
 
 });
 
-function moveScore(score){
+function moveScore(){
+	$('.score').removeClass('selected-score');
+	$('#s'+currentScore).addClass('selected-score');
 	currentScore++;
 }
 
@@ -45,6 +47,7 @@ function rollout(answer){
 $(document).ready(function(){
 	currentAnswer = getNext();
 	currentScore = 0;
+	moveScore();
 
 	$('.options').click(function(){
 		if ($(this).attr('id') == currentAnswer){
